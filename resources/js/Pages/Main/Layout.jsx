@@ -17,7 +17,7 @@ const Layout = ({children}) => {
         <div className="menu">
             <b>
                 <a href="/home">Home</a>
-                {user.role == 'admin' ? (
+                {user?.role == 'admin' ? (
                     <div>
                     <a href="/guru/index">GURU</a>
                     <a href="/jurusan/index">JURUSAN</a>
