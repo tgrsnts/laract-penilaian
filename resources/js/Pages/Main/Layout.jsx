@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../css/style.css';
-import headerImage from '../../src/images/header.jpg';
+import '../../../css/style.css';
+import headerImage from '../../../src/images/header.jpg';
 import { Link, usePage } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
 

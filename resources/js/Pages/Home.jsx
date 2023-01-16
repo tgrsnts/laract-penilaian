@@ -1,7 +1,7 @@
 import React from 'react';
 import { usePage } from '@inertiajs/inertia-react';
-import '../../css/style.css';
 import Layout from './Main/Layout';
+import '../../css/style.css';
 
 const Home = () => {
     const { user} = usePage().props.auth;
