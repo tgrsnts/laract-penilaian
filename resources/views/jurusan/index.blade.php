@@ -1,9 +1,9 @@
-@extends('main.layout')
+]@extends('main.layout')
 @section('content')
     <center>
         <b>
-            <h2>LIST DATA GURU</h2>
-            <a href="/guru/create" class="button-primary">Tambah Data</a>
+            <h2>LIST DATA JURUSAN</h2>
+            <a href="/jurusan/create" class="button-primary">Tambah Data</a>
             @if (session('success'))            
               <p class="text-succes">{{ session('success') }}</p>  
             @endif
@@ -14,25 +14,17 @@
                 <thead>
                     <tr>
                         <th>NO</th>
-                        <th>NIP</th>
-                        <th>NAMA GURU</th>
-                        <th>JENIS KELAMIN</th>
-                        <th>ALAMAT</th>
-                        <th>PASSWORD</th>
+                        <th>JURUSAN</th>                       
                         <th>ACTION</th>
                     </tr>
                     <tbody>
                         @foreach ($data as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->nip }}</td>
-                            <td>{{ $item->nama_guru }}</td>
-                            <td>{{ $item->jk }}</td>
-                            <td>{{ $item->alamat }}</td>
-                            <td>{{ $item->password }}</td>
+                            <td>{{ $item->nama_jurusan }}</td>                            
                             <td>
                                 <a href=""></a>
-                                <form action="/guru/{{ $item->id }}" method="POST" class="d-inline">
+                                <form action="/jurusan/{{ $item->id }}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Sure?')">

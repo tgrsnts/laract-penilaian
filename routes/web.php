@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\JurusanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -41,5 +42,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('guru', GuruController::class);
+Route::resource('jurusan', JurusanController::class);
 
 require __DIR__.'/auth.php';
