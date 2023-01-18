@@ -2,14 +2,14 @@
 @section('content')
     <center>
         <b>
-            <h2>TAMBAH DATA JURUSAN</h2>
-            <a href="/jurusan" class="button-primary">Kembali</a>
-            <form action="/jurusan" method="POST">
+            <h2>TAMBAH DATA MAPEL</h2>
+            <a href="/mapel" class="button-primary">Kembali</a>
+            <form action="/mapel" method="POST">
                 @csrf
                 <table>
                     <tr>
-                        <td width="25%">JURUSAN</td>
-                        <td width="25%"><input type="text" name="nama_jurusan"></td>
+                        <td width="25%">Mata Pelajaran</td>
+                        <td width="25%"><input type="text" name="nama_mapel"></td>
                     </tr>
                     <tr>
                         <td colspan="2">

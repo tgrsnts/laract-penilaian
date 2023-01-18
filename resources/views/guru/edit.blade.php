@@ -6,6 +6,7 @@
             <a href="/guru" class="button-primary">Kembali</a>
             <form action="/guru/{{ $data->id }}" method="POST">
                 @csrf
+                @method('PUT')
                 <table>
                     <tr>
                         <td width="25%">NIP</td>

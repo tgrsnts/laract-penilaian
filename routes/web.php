@@ -3,7 +3,12 @@
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\KelasController;
+use App\Http\Controllers\MapelController;
+use App\Http\Controllers\MengajarController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -43,5 +48,12 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('guru', GuruController::class);
 Route::resource('jurusan', JurusanController::class);
+Route::resource('mapel', MapelController::class);
+Route::resource('kelas', KelasController::class)->parameters([
+    'kelas' => 'kelas'
+]);
+Route::resource('siswa', SiswaController::class);
+Route::resource('mengajar', MengajarController::class);
+Route::resource('nilai', NilaiController::class);
 
 require __DIR__.'/auth.php';
