@@ -3,8 +3,8 @@
     <center>
         <b>
             <h2>TAMBAH DATA JURUSAN</h2>
-            <a href="/jurusan" class="button-primary">Kembali</a>
-            <form action="" method="POST">
+            <a href="jurusan" class="button-primary">Kembali</a>
+            <form action="/jurusan" method="POST">
                 @csrf
                 <table>
                     <tr>

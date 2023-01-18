@@ -1,4 +1,4 @@
-]@extends('main.layout')
+@extends('main.layout')
 @section('content')
     <center>
         <b>
@@ -23,7 +23,7 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->nama_jurusan }}</td>                            
                             <td>
-                                <a href=""></a>
+                                <a href="/jurusan/{{ $item->id }}/edit">Edit</a>
                                 <form action="/jurusan/{{ $item->id }}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf

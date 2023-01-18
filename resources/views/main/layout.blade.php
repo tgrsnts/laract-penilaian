@@ -13,7 +13,7 @@
     <div>
         {{-- HEADER --}}
         <div class="header">
-            <img src="{{ asset('/gambar/header.jpg') }}">
+            <img src="{{ asset('/gambar/header.jpg') }}" width="100%" class="d-block">
         </div>
 
         {{-- MENU  --}}
@@ -21,14 +21,14 @@
             <b>
                 <a href="/home">HOME</a>
                 {{-- @if (session('user')->role == 'admin') --}}
-                <a href="/guru/index">GURU</a>
-                <a href="/jurusan/index">JURUSAN</a>
-                <a href="/kelas/index">KELAS</a>
-                <a href="/siswa/index">SISWA</a>
-                <a href="/mapel/index">MAPEL</a>
-                <a href="/mengajar/index">MENGAJAR</a>
+                <a href="/guru">GURU</a>
+                <a href="/jurusan">JURUSAN</a>
+                <a href="/kelas">KELAS</a>
+                <a href="/siswa">SISWA</a>
+                <a href="/mapel">MAPEL</a>
+                <a href="/mengajar">MENGAJAR</a>
                 {{-- @else --}}
-                <a href="/nilai/index">NILAI</a>
+                <a href="/nilai">NILAI</a>
                 {{-- @endif --}}
                 <a href="/logout">LOGOUT</a>
             </b>

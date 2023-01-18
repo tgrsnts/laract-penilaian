@@ -26,7 +26,7 @@ class GuruController extends Controller
      */
     public function create()
     {
-        //
+        return view('guru.create');
     }
 
     /**
@@ -37,7 +37,18 @@ class GuruController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'id' => ['required'],
+            'nip' => ['required'],
+            'nama_guru' => ['required'],
+            'jk' => ['required'],
+            'alamat' => ['required'],
+            'password' => ['required']
+        ]);
+
+        if(Guru::create($data)){
+            return redirect('guru')->with('success', 'Data berhasil ditambah');
+        }
     }
 
     /**

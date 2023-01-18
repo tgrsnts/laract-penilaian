@@ -4,7 +4,7 @@
         <b>
             <h2>EDIT DATA JURUSAN</h2>
             <a href="/jurusan" class="button-primary">Kembali</a>
-            <form action="" method="POST">
+            <form action="/jurusan/{{$data->id}}" method="POST">
                 @csrf
                 @method('PUT')
                 <table>

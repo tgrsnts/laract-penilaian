@@ -92,6 +92,14 @@ option {
   display: none;
 }
 
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
 .button-primary {
   background-color: #006cff;
   border: none;
