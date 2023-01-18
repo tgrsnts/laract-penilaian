@@ -83,7 +83,7 @@ class JurusanController extends Controller
             'nama_jurusan' => ['required']
         ]);
 
-        if(Jurusan::where('id', $jurusan->id)->update($data)){
+        if($jurusan->update($data)){
             return redirect('jurusan')->with('success', 'Data berhasil diubah');
         }
     }
@@ -96,7 +96,7 @@ class JurusanController extends Controller
      */
     public function destroy(Jurusan $jurusan)
     {
-        if(Jurusan::where('id', $jurusan->id)->delete()){
+        if($jurusan->delete()){
             return redirect('jurusan')->with('success', 'Data berhasil dihapus');
         }   
     }

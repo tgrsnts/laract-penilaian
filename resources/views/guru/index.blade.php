@@ -31,7 +31,7 @@
                             <td>{{ $item->alamat }}</td>
                             <td>{{ $item->password }}</td>
                             <td>
-                                <a href=""></a>
+                                <a href="/guru/{{ $item->id }}/edit">Edit</a>
                                 <form action="/guru/{{ $item->id }}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf

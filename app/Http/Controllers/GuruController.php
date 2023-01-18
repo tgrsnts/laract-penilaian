@@ -37,8 +37,7 @@ class GuruController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'id' => ['required'],
+        $data = $request->validate([            
             'nip' => ['required'],
             'nama_guru' => ['required'],
             'jk' => ['required'],
@@ -68,9 +67,11 @@ class GuruController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Guru $guru)
     {
-        //
+        return view('guru.edit', [
+            'data' => $guru
+        ]);
     }
 
     /**
@@ -80,9 +81,19 @@ class GuruController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Guru $guru)
     {
-        //
+        $data = $request->validate([            
+            'nip' => ['required'],
+            'nama_guru' => ['required'],
+            'jk' => ['required'],
+            'alamat' => ['required'],
+            'password' => ['required']
+        ]);
+
+        if($guru->update($data)){
+            return redirect('guru')->with('success', 'Data berhasil diubah');
+        }
     }
 
     /**
@@ -91,8 +102,10 @@ class GuruController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Guru $guru)
     {
-        //
+        if($guru->delete()){
+            return redirect('guru')->with('success', 'Data berhasil dihapus');
+        }
     }
 }
