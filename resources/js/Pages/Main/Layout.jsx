@@ -19,15 +19,15 @@ const Layout = ({ children }) => {
                     <a href="/home">Home</a>
                     {user?.role == 'admin' ? (
                         <div>
-                            <a href="/guru/index">GURU</a>
-                            <a href="/jurusan/index">JURUSAN</a>
-                            <a href="/kelas/index">KELAS</a>
-                            <a href="/siswa/index">SISWA</a>
-                            <a href="/mapel/index">MAPEL</a>
-                            <a href="/mengajar/index">MENGAJAR</a>
+                            <a href="/guru">GURU</a>
+                            <a href="/jurusan">JURUSAN</a>
+                            <a href="/kelas">KELAS</a>
+                            <a href="/siswa">SISWA</a>
+                            <a href="/mapel">MAPEL</a>
+                            <a href="/mengajar">MENGAJAR</a>
                         </div>
                     ) : (
-                        <a href="/nilai/index">NILAI</a>
+                        <a href="/nilai">NILAI</a>
                     )}
                     <a href="/logout">LOGOUT</a>
                 </b>
