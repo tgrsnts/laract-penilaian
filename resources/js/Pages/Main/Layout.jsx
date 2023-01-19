@@ -4,7 +4,7 @@ import headerImage from '../../../src/images/header.jpg';
 import { Link, usePage } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
 
-const Layout = ({ children }) => {
+const Layout = ({ auth, children }) => {
     const { user } = usePage().props.auth
     return (
         <div>
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
                     ) : (
                         <a href="/nilai">NILAI</a>
                     )}
-                    <a href="/logout">LOGOUT</a>
+                    <a  method="post" href={route('logout')} as="button">LOGOUT</a>
                 </b>
             </div>
 
