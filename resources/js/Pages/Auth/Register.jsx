@@ -10,8 +10,9 @@ export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
         name: '',
         email: '',
+        role: '',
         password: '',
-        password_confirmation: '',
+        password_confirmation: '',        
     });
 
     useEffect(() => {
@@ -67,6 +68,24 @@ export default function Register() {
                     />
 
                     <InputError message={errors.email} className="mt-2" />
+                </div>
+
+                <div>
+                    <InputLabel forInput="role" value="Role" />
+
+                    <TextInput
+                        id="role"
+                        name="role"
+                        type="text"
+                        value={data.role}
+                        className="mt-1 block w-full"
+                        autoComplete="role"
+                        isFocused={true}
+                        handleChange={onHandleChange}
+                        required
+                    />
+
+                    <InputError message={errors.role} className="mt-2" />
                 </div>
 
                 <div className="mt-4">
