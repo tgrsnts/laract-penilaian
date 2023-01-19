@@ -32,12 +32,14 @@ Route::post('/login/guru', [IndexController::class, 'loginGuru']);
 Route::post('/logout', [IndexController::class, 'logout']);
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    // return Inertia::render('Welcome', [
+    //     'canLogin' => Route::has('login'),
+    //     'canRegister' => Route::has('register'),
+    //     'laravelVersion' => Application::VERSION,
+    //     'phpVersion' => PHP_VERSION,
+    // ]);
+
+    return redirect('/');
 });
 
 Route::get('/dashboard', function () {

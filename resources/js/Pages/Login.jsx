@@ -6,7 +6,7 @@ import '../../css/style.css';
 import HeaderImage from "../../src/images/header.jpg";
 import Gambar2 from "../../src/images/g2.jpg"
 
-export const Login = () => {
+export default function Login  () {
     const { error } = usePage().props.errors;
     const { idAdmin, setIdAdmin } = useState();
     const { nis, setNis } = useState();
@@ -53,21 +53,21 @@ export const Login = () => {
             <fieldset>
                 <legend></legend>
                 <center>
-                    <button className="button" onClick={()=>{
+                    <button className="button-login" onClick={()=>{
                         setFormAdminVisible(!formAdminVisible);
                         setFormSiswaVisible(false);
                         setFormGuruVisible(false);
                     }}>
                         Admin
                     </button>
-                    <button className="button" onClick={()=>{
+                    <button className="button-login" onClick={()=>{
                        setFormAdminVisible(false);
                        setFormSiswaVisible(!formSiswaVisible);
                        setFormGuruVisible(false); 
                     }}>
                         Siswa
                     </button>
-                    <button className="button" onClick={()=>{
+                    <button className="button-login" onClick={()=>{
                         setFormAdminVisible(false);
                         setFormSiswaVisible(false);
                         setFormGuruVisible(!formGuruVisible);
@@ -102,7 +102,7 @@ export const Login = () => {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className='button' type='button' onClick={()=>handleLoginAdmin}>Login</button>    
+                                <button className="button-login" type='button' onClick={()=>handleLoginAdmin}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
@@ -132,7 +132,7 @@ export const Login = () => {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className='button' type='button' onClick={()=>handleLoginSiswa}>Login</button>    
+                                <button className="button-login" type='button' onClick={()=>handleLoginSiswa}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
@@ -162,7 +162,7 @@ export const Login = () => {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className='button' type='button' onClick={()=>handleLoginGuru}>Login</button>    
+                                <button className="button-login" type='button' onClick={()=>handleLoginGuru}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
