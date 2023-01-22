@@ -24,23 +24,23 @@ use Inertia\Inertia;
 |
 */
 
-
+Route::get('/', [IndexController::class, 'index']);
 Route::get('/home', [IndexController::class, 'home']);
 Route::post('/login/admin', [IndexController::class, 'loginAdmin']);
 Route::post('/login/siswa', [IndexController::class, 'loginSiswa']);
 Route::post('/login/guru', [IndexController::class, 'loginGuru']);
 Route::post('/logout', [IndexController::class, 'logout']);
 
-Route::get('/', function () {
-    // return Inertia::render('Welcome', [
-    //     'canLogin' => Route::has('login'),
-    //     'canRegister' => Route::has('register'),
-    //     'laravelVersion' => Application::VERSION,
-    //     'phpVersion' => PHP_VERSION,
-    // ]);
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
 
-    return redirect('/');
-});
+//     // return redirect('/');
+// });
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

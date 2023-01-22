@@ -49,25 +49,25 @@ export default function Login  () {
             <b><a href="#" className='active'>Home</a></b>
         </div>
 
-        <div className="kiri">
+        <div className="kiri-atas">
             <fieldset>
                 <legend></legend>
                 <center>
-                    <button className="button-login" onClick={()=>{
+                    <button className="button-primary" onClick={()=>{
                         setFormAdminVisible(!formAdminVisible);
                         setFormSiswaVisible(false);
                         setFormGuruVisible(false);
                     }}>
                         Admin
                     </button>
-                    <button className="button-login" onClick={()=>{
+                    <button className="button-primary" onClick={()=>{
                        setFormAdminVisible(false);
                        setFormSiswaVisible(!formSiswaVisible);
                        setFormGuruVisible(false); 
                     }}>
                         Siswa
                     </button>
-                    <button className="button-login" onClick={()=>{
+                    <button className="button-primary" onClick={()=>{
                         setFormAdminVisible(false);
                         setFormSiswaVisible(false);
                         setFormGuruVisible(!formGuruVisible);
@@ -102,7 +102,7 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-login" type='button' onClick={()=>handleLoginAdmin}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginAdmin}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
@@ -132,7 +132,7 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-login" type='button' onClick={()=>handleLoginSiswa}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginSiswa}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
@@ -162,7 +162,7 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-login" type='button' onClick={()=>handleLoginGuru}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginGuru}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
