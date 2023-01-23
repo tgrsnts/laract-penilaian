@@ -19,8 +19,8 @@
                     <tr>
                         <td width="25%">JENIS KELAMIN</td>
                         <td width="25%">
-                            <input type="radio" name="jk" value="L" {{ $data->jk == "L" ? "selected" : "" }}>Laki-laki
-                            <input type="radio" name="jk" value="P" {{ $data->jk == "P" ? "selected" : "" }}>Perempuan
+                            <input type="radio" name="jk" value="L" {{ $data->jk == "L" ? "checked" : "" }}>Laki-laki
+                            <input type="radio" name="jk" value="P" {{ $data->jk == "P" ? "checked" : "" }}>Perempuan
                         </td>
                     </tr>
                     <tr>
