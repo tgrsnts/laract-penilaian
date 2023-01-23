@@ -33,8 +33,8 @@
                             <td>{{ $item->kelas->nama_kelas }}</td>
                             <td>{{ $item->password}}</td>                           
                             <td>
-                                <a href="/kelas/{{ $item->id }}/edit">Edit</a>
-                                <form action="/kelas/{{ $item->id }}" method="POST" class="d-inline">
+                                <a href="/siswa/{{ $item->id }}/edit">Edit</a>
+                                <form action="/siswa/{{ $item->id }}" method="POST" class="d-inline">
                                     @method('delete')
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Sure?')">
