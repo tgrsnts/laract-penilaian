@@ -8,10 +8,10 @@ import Gambar2 from "../../src/images/g2.jpg"
 
 export default function Login  () {
     const { error } = usePage().props.errors;
-    const { idAdmin, setIdAdmin } = useState();
-    const { nis, setNis } = useState();
-    const { nip, setNip } = useState();
-    const { password, setPassword } = useState();
+    const [ idAdmin, setIdAdmin ] = useState();
+    const [ nis, setNis ] = useState();
+    const [ nip, setNip ] = useState();
+    const [ password, setPassword ] = useState();
 
     const [formAdminVisible, setFormAdminVisible] = useState(false);
     const [formSiswaVisible, setFormSiswaVisible] = useState(false);
@@ -83,6 +83,7 @@ export default function Login  () {
                     <center>Login</center>
                     <p>{error}</p>
                     <table>
+                        <tbody>
                         <tr>
                             <td width="25%">Kode Admin</td>
                             <td width="25%">
@@ -102,10 +103,11 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-primary" type='button' onClick={()=>handleLoginAdmin}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginAdmin()}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
+                        </tbody>                        
                     </table>
                 </div>
                 {/* form siswa  */}
@@ -113,11 +115,12 @@ export default function Login  () {
                     <center>Login Siswa</center>
                     <p>{error}</p>
                     <table>
+                        <tbody>
                         <tr>
                             <td width="25%">NIS</td>
                             <td width="25%">
                                 <input type="text" onChange={(e)=>{
-                                    setIdNis(e.target.value)
+                                    setNis(e.target.value)
                                 }} />
                             </td>
                         </tr>
@@ -132,10 +135,11 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-primary" type='button' onClick={()=>handleLoginSiswa}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginSiswa()}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
+                        </tbody>                        
                     </table>
                 </div>
                 {/* form guru  */}
@@ -143,11 +147,12 @@ export default function Login  () {
                     <center>Login</center>
                     <p>{error}</p>
                     <table>
+                        <tbody>
                         <tr>
                             <td width="25%">NIP</td>
                             <td width="25%">
                                 <input type="text" onChange={(e)=>{
-                                    setIdNip(e.target.value)
+                                    setNip(e.target.value)
                                 }} />
                             </td>
                         </tr>
@@ -162,10 +167,11 @@ export default function Login  () {
                         <tr>
                             <td colSpan="2">
                                 <center>
-                                <button className="button-primary" type='button' onClick={()=>handleLoginGuru}>Login</button>    
+                                <button className="button-primary" type='button' onClick={()=>handleLoginGuru()}>Login</button>    
                                 </center>            
                             </td>
                         </tr>
+                        </tbody>
                     </table>
                 </div>
             </fieldset>
