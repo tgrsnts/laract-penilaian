@@ -30,11 +30,10 @@
                 @else
                 <a href="/nilai">NILAI</a>
                 @endif
-                <form action="/logout" method="post">
-                @csrf
-                <input type="submit" value="LOGOUT">                
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button>LOGOUT</button>
                 </form>
-                
             </b>
         </div>
         {{-- CONTENT  --}}

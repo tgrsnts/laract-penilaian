@@ -5,7 +5,11 @@ import { Link, usePage } from '@inertiajs/inertia-react';
 import { Inertia } from '@inertiajs/inertia';
 
 const Layout = ({ auth, children }) => {
-    const { user } = usePage().props.auth
+    const { user } = usePage().props.auth;
+    const handleLogout = () => {
+    Inertia.post("/logout", {         
+        });        
+    }
     return (
         <div>
             {/* Header */}
@@ -29,7 +33,7 @@ const Layout = ({ auth, children }) => {
                     ) : (
                         <a href="/nilai">NILAI</a>
                     )}
-                    <a  method="post" href={route('logout')} as="button">LOGOUT</a>
+                    <a onClick={()=>handleLogout()}>LOGOUT</a>                
                 </b>
             </div>
 
