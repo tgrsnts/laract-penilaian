@@ -16,13 +16,13 @@ class NilaiController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->role == "guru"){
+        if(session('user')->role == "guru"){
             $nilai = Nilai::whereHas('mengajar', function($query){
-                $query->where('guru_id', auth()->user()->id);
+                $query->where('guru_id', session('user')->id);
             })->get();
         } else {
             $nilai = Nilai::whereHas('siswa', function($query){
-                $query->where('nis', auth()->user()->nis);
+                $query->where('nis', session('user')->nis);
             })->get();
         }
         return view('nilai.index', [
