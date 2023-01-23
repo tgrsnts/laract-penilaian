@@ -38,8 +38,6 @@ Route::post('/logout', [IndexController::class, 'logout']);
 //         'laravelVersion' => Application::VERSION,
 //         'phpVersion' => PHP_VERSION,
 //     ]);
-
-//     // return redirect('/');
 // });
 
 Route::get('/dashboard', function () {

@@ -12,7 +12,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        if(session('user')){
+        if (session('user')) {
             return back();
         }
         return Inertia::render('Login');
@@ -20,17 +20,14 @@ class IndexController extends Controller
 
     public function home()
     {
-        if(session('user')){
-            return back();
-        }
         return Inertia::render('Home');
     }
 
     public function loginAdmin(Request $request)
     {
         $auth = Administrator::where('id_admin', $request->idAdmin)->where('password', $request->password)->first();
-        
-        if(!$auth) return back()->with('error', 'Kode Admin atau Password anda salah');
+
+        if (!$auth) return back()->with('error', 'Kode Admin atau Password anda salah');
 
         $auth->role = 'admin';
         session(['user' => $auth]);
@@ -40,8 +37,8 @@ class IndexController extends Controller
     public function loginSiswa(Request $request)
     {
         $auth = Siswa::where('nis', $request->nis)->where('password', $request->password)->first();
-        
-        if(!$auth) return back()->with('error', 'NIS atau Password anda salah');
+
+        if (!$auth) return back()->with('error', 'NIS atau Password anda salah');
 
         $auth->role = 'siswa';
         session(['user' => $auth]);
@@ -51,10 +48,10 @@ class IndexController extends Controller
     public function loginGuru(Request $request)
     {
         $auth = Guru::where('nip', $request->nip)->where('password', $request->password)->first();
-        
-        if(!$auth) return back()->with('error', 'Kode Admin anda salah');
 
-        $auth->role = 'siswa';
+        if (!$auth) return back()->with('error', 'NIP atau Password anda salah');
+
+        $auth->role = 'guru';        
         session(['user' => $auth]);
         return redirect('/home');
     }
