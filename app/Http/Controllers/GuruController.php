@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guru;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class GuruController extends Controller
 {
@@ -14,8 +15,11 @@ class GuruController extends Controller
      */
     public function index()
     {
-        return view('guru.index', [            
-        'data' => Guru::all()
+        // return view('guru.index', [            
+        // 'data' => Guru::all()
+        // ]);
+        return Inertia::render('Guru/Index', [
+            'gurus' => Guru::all()
         ]);
     }
 
@@ -26,7 +30,8 @@ class GuruController extends Controller
      */
     public function create()
     {
-        return view('guru.create');
+        // return view('guru.create');
+        return Inertia::render('Guru/Create');
     }
 
     /**
@@ -69,8 +74,11 @@ class GuruController extends Controller
      */
     public function edit(Guru $guru)
     {
-        return view('guru.edit', [
-            'data' => $guru
+        // return view('guru.edit', [
+        //     'data' => $guru
+        // ]);
+        return Inertia::render('Guru/Edit', [
+            'guru' => $guru
         ]);
     }
 
