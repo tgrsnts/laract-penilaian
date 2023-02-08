@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@inertiajs/inertia-react";
+import { Button } from "react-bootstrap";
 import Layout from "../Main/Layout";
 
 const Index = (data) => { 
@@ -26,16 +27,16 @@ const Index = (data) => {
                 <tbody>
                         {gurus.map((guru, index) => (
                         <tr key={index}>
-                            <td></td>
+                            <td>{index+1}</td>
                             <td>{ guru.nip }</td>
                             <td>{ guru.nama_guru }</td>
                             <td>{ guru.jk }</td>
                             <td>{ guru.alamat }</td>
                             <td>{ guru.password }</td>
-                            <td>
-                                <Link href={route("guru.edit", guru.id)}>Edit</Link>
+                            <td>                            
+                                <Button className="btn-warning"><Link href={route("guru.edit", guru.id)}>Edit</Link></Button>
                                 <form action={route("guru.destroy", guru.id)}>
-                                    <input type="submit" value="Hapus"/>
+                                    <Button type="submit" className="btn-danger">Hapus</Button>
                                 </form>
                             </td>
                         </tr>                           

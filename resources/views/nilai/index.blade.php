@@ -16,18 +16,27 @@
                 <thead>
                     <tr>
                         <th>NO</th>
-                        <th>GURU</th>
-                        <th>KELAS</th>
-                        <th>MATA PELAJARAN</th>                       
+                        <th>GURU - MAPEL - KELAS</th>
+                        <th>NAMA SISWA</th>
+                        <th>UH</th>  
+                        <th>UTS</th>   
+                        <th>UAS</th> 
+                        <th>NA</th>   
+                        @if(session('user')->role == 'guru')
                         <th>ACTION</th>
+                        @endif                                     
                     </tr>
                     <tbody>
                         @foreach ($data as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
-                            <td>{{ $item->guru->nama_guru }}</td>
-                            <td>{{ $item->kelas->nama_kelas }}</td>
-                            <td>{{ $item->mapel->nama_mapel }}</td>                          
+                            <td>{{ $item->mengajar->guru->nama_guru }} - {{$item->mengajar->mapel->nama_mapel}} - {{ $item->mengajar->kelas->nama_kelas }}</td>
+                            <td>{{ $item->siswa->nama_siswa }}</td>
+                            <td>{{ $item->uh }}</td>
+                            <td>{{ $item->uts }}</td> 
+                            <td>{{ $item->uas }}</td>    
+                            <td>{{ $item->na }}</td>   
+                            @if(session('user')->role == 'guru')                      
                             <td>
                                 <a href="/nilai/{{ $item->id }}/edit">Edit</a>
                                 <form action="/nilai/{{ $item->id }}" method="POST" class="d-inline">
@@ -50,6 +59,7 @@
                                     </button>
                                 </form>
                             </td>
+                            @endif
                         </tr>                           
                         @endforeach
                     </tbody>

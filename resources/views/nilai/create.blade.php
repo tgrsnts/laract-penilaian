@@ -4,6 +4,7 @@
         <b>
             <h2>TAMBAH DATA NILAI</h2>
             <a href="/nilai" class="button-primary">Kembali</a>
+            {{ $errors }}
             <form action="/nilai" method="POST">
                 @csrf
                 <table>              
@@ -13,7 +14,7 @@
                             <select name="mengajar_id">
                                 <option value="" selected>Select</option>
                                 @foreach ($mengajars as $mengajar)
-                                    <option value="{{ $mengajar->id }}">{{ $mengajar->mapel->nama_mapel }}</option>
+                                    <option value="{{ $mengajar->id }}">{{ $mengajar->mapel->nama_mapel }} - {{ $mengajar->kelas->nama_kelas }}</option>
                                 @endforeach
                             </select>
                         </td>
@@ -21,7 +22,7 @@
                     <tr>
                         <td width="25%">SISWA</td>
                         <td width="25%">
-                           <select name="mapel_id" id="">
+                           <select name="siswa_id" id="">
                             <option value="">Select</option>
                             @foreach ($siswas as $siswa)
                                 <option value="{{ $siswa->id }}">{{ $siswa->nama_siswa }}</option>
