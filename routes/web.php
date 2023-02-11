@@ -29,7 +29,7 @@ Route::get('/home', [IndexController::class, 'home']);
 Route::post('/login/admin', [IndexController::class, 'loginAdmin']);
 Route::post('/login/siswa', [IndexController::class, 'loginSiswa']);
 Route::post('/login/guru', [IndexController::class, 'loginGuru']);
-Route::post('/logout', [IndexController::class, 'logout']);
+Route::get('/logout', [IndexController::class, 'logout']);
 
 // Route::get('/', function () {
 //     return Inertia::render('Welcome', [

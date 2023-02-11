@@ -23,10 +23,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-<<<<<<< HEAD
         "bootstrap": "^5.2.3",
-        "react-bootstrap": "^2.7.1"
-=======
         "react-bootstrap": "^2.7.0"
 >>>>>>> parent of c3cdad0 (.)
     }
