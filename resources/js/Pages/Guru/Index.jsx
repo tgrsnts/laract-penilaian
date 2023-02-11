@@ -26,16 +26,16 @@ const Index = (data) => {
                 <tbody>
                         {gurus.map((guru, index) => (
                         <tr key={index}>
-                            <td>{index+1}</td>
+                            <td></td>
                             <td>{ guru.nip }</td>
                             <td>{ guru.nama_guru }</td>
                             <td>{ guru.jk }</td>
                             <td>{ guru.alamat }</td>
                             <td>{ guru.password }</td>
-                            <td>                            
-                                <Button className="btn-warning"><Link href={route("guru.edit", guru.id)}>Edit</Link></Button>
+                            <td>
+                                <Link href={route("guru.edit", guru.id)}>Edit</Link>
                                 <form action={route("guru.destroy", guru.id)}>
-                                    <Button type="submit" className="btn-danger">Hapus</Button>
+                                    <input type="submit" value="Hapus"/>
                                 </form>
                             </td>
                         </tr>                           
