@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "@inertiajs/inertia-react";
-import { Button } from "react-bootstrap";
 import Layout from "../Main/Layout";
 
 const Index = (data) => { 
