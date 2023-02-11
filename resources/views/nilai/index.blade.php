@@ -3,9 +3,7 @@
     <center>
         <b>
             <h2>LIST DATA NILAI</h2>
-            @if(session('user')->role == 'guru')
             <a href="/nilai/create" class="button-primary">Tambah Data</a>
-            @endif
             @if (session('success'))            
               <p class="text-succes">{{ session('success') }}</p>  
             @endif

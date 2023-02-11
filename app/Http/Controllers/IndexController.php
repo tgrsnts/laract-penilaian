@@ -30,7 +30,7 @@ class IndexController extends Controller
         if (!$auth) return back()->with('error', 'Kode Admin atau Password anda salah');
 
         $auth->role = 'admin';
-        session(['user' => $auth]);        
+        session(['user' => $auth]);
         return redirect('/home');
     }
 

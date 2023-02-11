@@ -24,31 +24,7 @@ body {
   text-decoration: none;
 }
 
-
-.menu button {
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-  color: #0000EE;
-  padding: 0;
-  text-decoration: underline;
-  font-family: inherit;
-  font-size: inherit;
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
 .menu a:hover:not(.active) {
-  background-color: #ddd;
-  color: black;
-}
-
-.menu button:hover:not(.active) {
   background-color: #ddd;
   color: black;
 }
@@ -139,7 +115,6 @@ option {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .button-warning {
   background-color: #ffe600;
   border: none;
@@ -155,7 +130,6 @@ option {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .button-danger {
   background-color: #ff0000;
   border: none;
@@ -171,7 +145,6 @@ option {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .button-login {
   background-color: #006cff;
   border: none;
@@ -226,15 +199,13 @@ div.deskripsi {
   text-align: center;
 }
 
-table {
+table{
   margin-bottom: 20px;
 }
-
 th {
   border-bottom: 1px solid black;
   text-align: center;
 }
-
 .text-success {
   color: #02a8a0;
 }
