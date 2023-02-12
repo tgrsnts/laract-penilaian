@@ -9,6 +9,7 @@ use App\Models\Guru;
 use App\Models\Jurusan;
 use App\Models\Kelas;
 use App\Models\Mapel;
+use App\Models\Mengajar;
 use App\Models\Siswa;
 use Illuminate\Database\Seeder;
 
@@ -75,6 +76,18 @@ class DatabaseSeeder extends Seeder
 
         Siswa::create([
             'nis' => '1020009428', 'nama_siswa' => 'M. Zaqqye Saprudin', 'jk' => 'L', 'alamat' => 'Cilebut City', 'kelas_id' => '1', 'password' => 'password',
+        ]);
+
+        Mengajar::create([
+            'guru_id' => 1,
+            'mapel_id' => 1, 
+            'kelas_id' => 1, 
+        ]);
+
+        Mengajar::create([
+            'guru_id' => 2,
+            'mapel_id' => 2, 
+            'kelas_id' => 1, 
         ]);
     }
 }

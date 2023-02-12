@@ -38,7 +38,7 @@ class NilaiController extends Controller
     public function create()
     {
         return view('nilai.create', [
-            'mengajars' => Mengajar::all(),
+            'mengajars' => Mengajar::all()->where('guru_id', session('user')->id),
             'siswas' => Siswa::all(),        
         ]);
     }
